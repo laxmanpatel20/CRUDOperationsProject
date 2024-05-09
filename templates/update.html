@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+</head>
+<body>
+    <div class="container1">
+        <h1>Update Member</h1><hr>
+        <form action="{% url 'uprecs' mem.id %}" method="post">
+            {% csrf_token %}
+            <label for="">First Name</label><br><br>
+            <input class="input-text" type="text" name="first" value="{{ mem.first_name }}"><br><br>
+            <label for="">Last Name</label><br><br>
+            <input class="input-text" type="text" name="last" value="{{ mem.last_name }}"><br><br>
+            <label for="">Country</label><br><br>
+            <input class="input-text" type="text" name="country" value="{{ mem.country }}"><br>
+            <button class="button" type="submit" class="button" id="news">Update</button>
+        </form>
+    </div>
+
+</body>
+</html>

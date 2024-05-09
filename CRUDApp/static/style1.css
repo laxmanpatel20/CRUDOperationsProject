@@ -1,0 +1,40 @@
+body{
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+.container1{
+    height: 75vh;
+    width: 30vw;
+    background-color: #95ccbe;
+    padding: 20px;
+    margin: 70px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(4, 4, 4, 4);
+}
+h1{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: "Roboto Thin";
+    text-align: center;
+    color: #1b0b1e;
+}
+.input-text {
+    width: 100%;
+    padding: 3%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.container1 #news{
+    background-color: blue;
+    border-color:white;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-size: 30px;
+    color: black;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <table border="2" id="customers">
+                <h1>Member</h1>
+            <tr>
+                <th>id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>country</th>
+                <th colspan="2" id="mid">Action</th>
+            </tr>
+            {% for x in mem %}
+            <tr>
+                <td>{{ x.id }}</td>
+                <td>{{ x.first_name }}</td>
+                <td>{{ x.last_name }}</td>
+                <td>{{ x.country }}</td>
+                <td>
+                <a href="update/{{ x.id }}"><button id="up">update</button></a>
+                </td>
+                <td>
+                <a href="delete/{{ x.id }}"><button id="del">delete</button></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+        <a href="{% url 'add' %}"><button id="news">Add Member</button></a>
+    </div>
+</body>
+</html>
